@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+
+package UnitedModels.Protos;
+
+import "google/protobuf/timestamp.proto";
+
+message Person {
+  int64 Id = 1;
+  string Name = 2;
+  Address Address = 3;
+  optional google.protobuf.Timestamp Timestamp = 4;
+}
+
+message Address {
+  int64 Id = 1;
+  string Data = 2;
+  optional int32 LineIndex = 3;
+}

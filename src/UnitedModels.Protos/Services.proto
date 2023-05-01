@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package UnitedModels.Protos;
+
+import "Models.proto";
+
+service PersonService {
+  rpc Get(GetRequest) returns (Person);
+}
+
+message GetRequest {
+  int64 Id = 1;
+}
